@@ -337,13 +337,13 @@ describe('PublicKey', function() {
     it('should output this known mainnet address correctly', function() {
       var pk = new PublicKey('03c87bd0e162f26969da8509cafcb7b8c8d202af30b928c582e263dd13ee9a9781');
       var address = pk.toAddress('livenet');
-      address.toString().should.equal('XjnkiGYQkC3bbAzvDjP7jkNouHCHNRr3ug');
+      address.toString().should.equal('PHh62zHMqQKCR556hvPRZ7fHggnUV3a1ph');
     });
 
     it('should output this known testnet address correctly', function() {
       var pk = new PublicKey('0293126ccc927c111b88a0fe09baa0eca719e2a3e087e8a5d1059163f5c566feef');
       var address = pk.toAddress('testnet');
-      address.toString().should.equal('yZKdLYCvDXa2kyQr8Tg3N6c3xeZoK7XDcj');
+      address.toString().should.equal('qWZZeNFA1vJWQJd7e51ffbAKNZQw7zeXWb');
     });
 
   });
@@ -351,12 +351,12 @@ describe('PublicKey', function() {
   describe('hashes', function() {
 
     // wif private key, address
-    // see: https://github.com/dashpay/dash/blob/master/src/test/key_tests.cpp#L20
+    // see: https://github.com/PACCommunity/PAC/blob/master/src/test/key_tests.cpp#L20
     var data = [
-      ['7qh6LYnLN2w2ntz2wwUhRUEgkQ2j8XB16FGw77ZRDZmC29bn7cD', 'Xywgfc872nn5CKtpATCoAjZCc4v96pJczy'],
-      ['7rve4MxeWFQHGbSYH6J2yaaZd3MBUqoDEwN6ZAZ6ZHmhTT4r3hW', 'XpmouUj9KKJ99ZuU331ZS1KqsboeFnLGgK'],
-      ['XBuxZHH6TqXUuaSjbVTFR1DQSYecxCB9QA1Koyx5tTc3ddhqEnhm', 'XxV9h4Xmv6Pup8tVAQmH97K6grzvDwMG9F'],
-      ['XHMkZqWcY6Zkoq1j42NBijD8z5N5FtNy2Wx7WyAfXX2HZgxry8cr', 'Xn7ZrYdExuk79Dm7CJCw7sfUWi2qWJSbRy']
+      ['XBTibc36nDjjbqZfao8EB4UeSExcF42vXDFdcd7Lr2MEAA5RpKo8', 'P9E75dRmwnPQQb4U1PKpYF9PheJZzETU9A'],
+      ['XFkjBPpUtMp5P9uKXqcybvHwypbpEb7i8qHdDjY9ATHNVWbCMHzz', 'PJF3nPLmz211puJ7q59cfeFKmyXEBkWFf7'],
+      ['XJhHcUxAPM58nwXq4DR7v3m2mz4zdS9bSTQ9qqh4UUssiN9mW8Mt', 'P9PPdPQt5ZQGEbxWt4HL9UV719p2Y1UpgJ'],
+      ['XHGhVGFCUurmkXRHbx6SUq44DqHs4BHXTKAh4oaSEkrF9qTAfdfK', 'P9cuzPSMd2GgFRoNLCW9u36e2ZbsJ2sLok']
     ];
 
     data.forEach(function(d){

@@ -24,10 +24,10 @@ describe('Proposal', function() {
     name: "TestProposal",
     start_epoch: startDate,
     end_epoch: endDate,
-    payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+    payment_address: 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL',
     payment_amount: 10,
     type: 1,
-    url: "http://www.dash.org"
+    url: "http://www.paccoin.net"
   };
   it('should create new proposal', function() {
     var proposal = new Proposal();
@@ -35,11 +35,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     proposal.serialize().should.equal(expectedHex);
   });
@@ -50,11 +50,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = 1477872000;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = 10;
     proposal.start_epoch = 'not a date'; // invalid date
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     expect(function() {
       return proposal.serialize();
@@ -67,11 +67,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = 'not a date';
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
     var expectedErr = new errors.GovObject.Proposal.invalidDate();
     expect(proposal.getSerializationError().message).to.be.equal(expectedErr.message);
 
@@ -83,11 +83,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = 1472688000;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = 10;
     proposal.start_epoch = 1477872000;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     expect(function() {
       return proposal.serialize();
@@ -104,11 +104,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = end_epoch;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = 10;
     proposal.start_epoch = start_epoch;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     expect(function() {
       return proposal.serialize();
@@ -122,11 +122,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'XmPtF6UoguyK'; // payment address must be > 26 characters
+    proposal.payment_address = 'PmPtF6UoguyK'; // payment address must be > 26 characters
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     expect(function() {
       return proposal.serialize();
@@ -140,21 +140,21 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = '8tS9fgiv8XAmTXxWqJBv7zbeS4jzrGGwxT';
+    proposal.payment_address = '6wqGTMk6GuDSKxj4CsM1nconHdC3GpjFS9';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     var proposal2 = new Proposal();
     proposal2.network = 'livenet';
     proposal2.end_epoch = endDate;
-    proposal2.name = 'Proposal-36-DashATM';
-    proposal2.payment_address = '7Z7X2jaqMtzsr2oHpSn89cNaEC16DYByz3';
+    proposal2.name = 'Proposal-36-PACATM';
+    proposal2.payment_address = '5B2nxfBGrQU4sfaneiTWVLfKMx9Lfyk2qe';
     proposal2.payment_amount = 1625.487;
     proposal2.start_epoch = startDate;
     proposal2.type = 1;
-    proposal2.url = "https://www.dashcentral.org/p/Proposal-36-DashATM";
+    proposal2.url = "https://www.dashcentral.org/p/Proposal-36-PACATM";
 
     expect(function() {
       return proposal.serialize();
@@ -171,11 +171,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = '';
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     expect(function() {
       return proposal.serialize();
@@ -189,7 +189,7 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'TestProposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
@@ -207,11 +207,11 @@ describe('Proposal', function() {
     proposal.network = 'testnet';
     proposal.end_epoch = endDate;
     proposal.name = 'Test Proposal';
-    proposal.payment_address = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+    proposal.payment_address = 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL';
     proposal.payment_amount = 10;
     proposal.start_epoch = startDate;
     proposal.type = 1;
-    proposal.url = "http://www.dash.org";
+    proposal.url = "http://www.paccoin.net";
 
     expect(function() {
       return proposal.serialize();
@@ -223,10 +223,10 @@ describe('Proposal', function() {
       name: "TestProposal",
       start_epoch: startDate,
       end_epoch: endDate,
-      payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+      payment_address: 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.paccoin.net"
     };
     var proposal = new Proposal();
     proposal = proposal.fromObject(jsonProposal);
@@ -240,10 +240,10 @@ describe('Proposal', function() {
       name: "TestProposal",
       start_epoch: startDate,
       end_epoch: endDate,
-      payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+      payment_address: 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.paccoin.net"
     };
 
     var proposal = new Proposal();
@@ -277,10 +277,10 @@ describe('Proposal', function() {
     var jsonProposal = {
       start_epoch: startDate,
       end_epoch: endDate,
-      payment_address: 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+      payment_address: 'qUq9ee1nLwmPSKPDdZoFCgXC2175V3JDeL',
       payment_amount: 10,
       type: 1,
-      url: "http://www.dash.org"
+      url: "http://www.paccoin.net"
     };
     var stringifiedJSON = JSON.stringify(jsonProposal);
     var proposal = new Proposal();
@@ -519,4 +519,4 @@ describe('Proposal', function() {
     expect(proposalRes).to.throw('Must be a valid JSON - Expected property url to be a string received:number');
   });
 });
-var expectedHex = '5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313736303035343430302c226e616d65223a225465737450726f706f73616c222c227061796d656e745f61646472657373223a22795847654e505158594658684c414e315a4b72416a787a7a426e5a324a5a4e4b6e68222c227061796d656e745f616d6f756e74223a31302c2273746172745f65706f6368223a313434343433353230302c2274797065223a312c2275726c223a22687474703a2f2f7777772e646173682e6f7267227d5d5d';
+var expectedHex = '5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313736303035343430302c226e616d65223a225465737450726f706f73616c222c227061796d656e745f61646472657373223a22715571396565316e4c776d50534b5044645a6f46436758433231373556334a44654c222c227061796d656e745f616d6f756e74223a31302c2273746172745f65706f6368223a313434343433353230302c2274797065223a312c2275726c223a22687474703a2f2f7777772e706163636f696e2e6e6574227d5d5d';

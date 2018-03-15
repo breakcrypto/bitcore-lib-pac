@@ -15,21 +15,21 @@ var MultiSigScriptHashInput = bitcore.Transaction.Input.MultiSigScriptHash;
 
 describe('MultiSigScriptHashInput', function() {
 
-  var privateKey1 = new PrivateKey('XBK4nzpDtLX1xZjoAFq7LJEAu2JgnJgqA7ZPK1eCLHd9AXSx1M6L');
-  var privateKey2 = new PrivateKey('XJTmEqmpWSB9EAHRaAmXAy9RJ8G143fUgAyBMwU7QwuyfJdx2tPY');
-  var privateKey3 = new PrivateKey('XJGNyNYMZLPKcnzMq1uFuQATaneh78efRb2QqzEr9GeD77wn2KwS');
+  var privateKey1 = new PrivateKey('XD6CuxfUL6JeswEcKwNgjsixhWJxDgueATGG4zLiPoLMyFbJNXmh');
+  var privateKey2 = new PrivateKey('XD5fwPt1ncP9HTxZ2cuxGLLNZiCLWWDBK5M1go3ZQma1ejRkRpkq');
+  var privateKey3 = new PrivateKey('XFibKGoCBs2fxYQFAioVs6ZAaehkWtqdKUaLB6qkVEqW8UGUGYJg');
   var public1 = privateKey1.publicKey;
   var public2 = privateKey2.publicKey;
   var public3 = privateKey3.publicKey;
-  var address = new Address('7UiEaDrcNXj1bCQJf1Yc54xkFNr8Ef4sTV');
+  var address = new Address('5NZ15oyUw89CxDDweUS7xGjRfnbG7enfyu');
 
   var output = {
-    address: '7UiEaDrcNXj1bCQJf1Yc54xkFNr8Ef4sTV',
     txId: '66e64ef8a3b384164b78453fa8c8194de9a473ba14f89485a0e433699daec140',
     outputIndex: 0,
     script: new Script(address),
     satoshis: 1000000
   };
+
   it('can count missing signatures', function() {
     var transaction = new Transaction()
       .from(output, [public1, public2, public3], 2)

@@ -124,10 +124,10 @@ describe('Interpreter', function() {
 
     it('should verify these simple transaction', function() {
       // first we create a transaction
-      var privateKey = new PrivateKey('cSBnVM4xvxarwGQuAfQFwqDg9k5tErHUHzgWsEfD4zdwUasvqRVY');
+      var privateKey = new PrivateKey('cTizhFvLdnW17np6ABTsaz26gcFv8nrU7MjGKn1p7yEv1pNE6o9u');
       var publicKey = privateKey.publicKey;
       var fromAddress = publicKey.toAddress();
-      var toAddress = 'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh';
+      var toAddress = 'qaWepowpzAZdtExYg7hAnYTRY6uKv6XykB';
       var scriptPubkey = Script.buildPublicKeyHashOut(fromAddress);
       var utxo = {
         address: fromAddress,

@@ -26,10 +26,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
 
       govObject = govObject.fromObject(jsonProposal);
@@ -43,8 +43,8 @@ describe('GovObject', function(){
     })
     it('should validate address', function(){
       var govObject = new GovObject;
-      govObject._verifyAddress('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh','testnet').should.equal(true);
-      govObject._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B6','livenet').should.equal(true);
+      govObject._verifyAddress('qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8','testnet').should.equal(true);
+      govObject._verifyAddress('PDNdPdiAZ8MBgTWzGbE5jWfsaiJqTci6kb','livenet').should.equal(true);
       govObject._verifyAddress('XuYDEzZzKxn&&knPDiVKe91sJasfajkshfjD1nQnnn5B6','livenet').should.equal(false);
       govObject._verifyAddress('knPDiVKe91sJasfajkshfjD1nQnnn5B6','testnet').should.equal(false);
       govObject._verifyAddress('XuYDEzZzKxn&&knPDiVKe91sJa/sfajkshfjD1nQnnn5B6','livenet').should.equal(false);
@@ -52,8 +52,8 @@ describe('GovObject', function(){
       govObject._verifyAddress(' XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B','livenet').should.equal(false);
       govObject._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B ','livenet').should.equal(false);
       govObject._verifyAddress('$XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B','livenet').should.equal(false);
-      govObject._verifyAddress('yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh','livenet').should.equal(false);
-      govObject._verifyAddress('XuYDEzZzKxnknPDiVKe91sJaD1nQnnn5B6','testnet').should.equal(false);
+      govObject._verifyAddress('qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8','livenet').should.equal(false);
+      govObject._verifyAddress('PDNdPdiAZ8MBgTWzGbE5jWfsaiJqTci6kb','testnet').should.equal(false);
     })
     it('should cast a stringified JSON Proposal into a Proposal Object', function(){
       var govObject = new GovObject;
@@ -62,10 +62,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
 
       var govObject = govObject.fromObject(JSON.stringify(jsonProposal));
@@ -81,10 +81,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
       var govObject = govObject.fromObject(jsonProposal);
       var newGovObject = new GovObject(govObject);
@@ -109,10 +109,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
       var govObject = govObject.fromObject(jsonProposal);
 
@@ -135,10 +135,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
       var govObject = govObject.fromObject(jsonProposal);
       var govObject2 = new GovObject;
@@ -157,10 +157,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
       var govObject = govObject.fromObject(jsonProposal);
       var govFromHexa = new GovObject;
@@ -178,10 +178,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
       var stringified = JSON.stringify(jsonProposal);
       stringified+="foobar";
@@ -200,9 +200,9 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
 
        var govObjRes = function(){
@@ -220,9 +220,9 @@ describe('GovObject', function(){
         type:"foobar",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
 
        var govObjRes = function(){
@@ -240,9 +240,9 @@ describe('GovObject', function(){
         type:42,
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
        var govObjRes = function(){
          return govObject.fromObject(jsonProposal);
@@ -270,10 +270,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
       var govObject = govObject.fromObject(jsonProposal);
       govObject.serialize().should.equal(expectedHex);
@@ -286,10 +286,10 @@ describe('GovObject', function(){
         name:"TestProposal",
         start_epoch:Math.round(new Date("2015-10-10").getTime()/1000),
         end_epoch:Math.round(new Date("2025-10-10").getTime()/1000),
-        payment_address:'yXGeNPQXYFXhLAN1ZKrAjxzzBnZ2JZNKnh',
+        payment_address:'qWfWFAEe1VDoDiB5eu7AUo3zhXwzjwQQa8',
         payment_amount:10,
         type:1,
-        url:"http://www.dash.org"
+        url:"http://www.paccoin.net"
       };
       var govObject = govObject.fromObject(jsonProposal);
       govObject.inspect().should.equal("<GovObject: "+expectedHex+">");
@@ -299,7 +299,7 @@ describe('GovObject', function(){
 
   });
 });
-var expectedHex = "5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313736303035343430302c226e616d65223a225465737450726f706f73616c222c227061796d656e745f61646472657373223a22795847654e505158594658684c414e315a4b72416a787a7a426e5a324a5a4e4b6e68222c227061796d656e745f616d6f756e74223a31302c2273746172745f65706f6368223a313434343433353230302c2274797065223a312c2275726c223a22687474703a2f2f7777772e646173682e6f7267227d5d5d";
+var expectedHex = "5b5b2270726f706f73616c222c7b22656e645f65706f6368223a313736303035343430302c226e616d65223a225465737450726f706f73616c222c227061796d656e745f61646472657373223a2271576657464145653156446f4469423565753741556f337a6858777a6a7751516138222c227061796d656e745f616d6f756e74223a31302c2273746172745f65706f6368223a313434343433353230302c2274797065223a312c2275726c223a22687474703a2f2f7777772e706163636f696e2e6e6574227d5d5d";
 //Polyfill for object.assign (not supported in 0.10.25);
 Object._assign = function (target, varArgs) { // .length of function is 2
   'use strict';
