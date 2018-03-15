@@ -1,7 +1,7 @@
 {
-  "name": "bitcore-lib-dash",
+  "name": "bitcore-lib-pac",
   "version": "0.15.3",
-  "description": "A pure and powerful JavaScript Dash library.",
+  "description": "A pure and powerful JavaScript PAC library.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -69,7 +69,7 @@
     }
   ],
   "keywords": [
-    "dash",
+    "pac",
     "transaction",
     "address",
     "p2p",
@@ -86,12 +86,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/dashevo/bitcore-lib-dash.git"
+    "url": "https://github.com/PACCommunity/bitcore-lib-pac.git"
   },
   "bugs": {
-    "url": "https://github.com/dashevo/bitcore-lib-dash/issues"
+    "url": "https://github.com/PACCommunity/bitcore-lib-pac/issues"
   },
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/PACCommunity/bitcore-lib-pac",
   "browser": {
     "request": "browser-request"
   },
@@ -106,7 +106,7 @@
     "x11-hash-js": "^1.0.0"
   },
   "devDependencies": {
-    "bitcore-build-dash": "dashevo/bitcore-build-dash",
+    "bitcore-build-pac": "^0.9.0",
     "browserify": "latest",
     "brfs": "^1.2.0",
     "chai": "^1.10.0",

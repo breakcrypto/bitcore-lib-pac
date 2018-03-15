@@ -15,7 +15,7 @@ To get started, just `npm install bitcore` or `bower install bitcore`.
 * [Private Keys](privatekey.md) and [Public Keys](publickey.md)
 * [Hierarchically-derived Private and Public Keys](hierarchical.md)
 
-## DASH Governance Objects
+## PAC Governance Objects
 * [Governance Object / Proposal](govobject/govobject.md)
 
 ## Payment Handling

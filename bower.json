@@ -1,17 +1,18 @@
 {
-  "name": "bitcore-lib-dash",
-  "main": "./bitcore-lib-dash.min.js",
+  "name": "bitcore-lib-pac",
+  "main": "./bitcore-lib-pac.min.js",
   "version": "0.15.3",
-  "homepage": "https://github.com/dashevo/bitcore-lib-dash",
+  "homepage": "https://github.com/PACCommunity/bitcore-lib-pac",
   "authors": [
-    "Dash", "BitPay, Inc."
+    "BitPay", "BitPay, Inc."
   ],
-  "description": "A pure, powerful core for your dash project.",
+  "description": "A pure, powerful core for your $PAC project.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "dash",
+    "Pac",
+    "Paccoin",
     "bitcoin",
     "bitcore",
     "btc",
